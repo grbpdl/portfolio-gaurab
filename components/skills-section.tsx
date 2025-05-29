@@ -1,6 +1,35 @@
-import { Progress } from "@/components/ui/progress"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+"use client";
+import { Progress } from "@/components/ui/progress";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Code,
+  FileCode,
+  GitBranch,
+  Github,
+  Terminal,
+  Database,
+  Layers,
+  Figma,
+  Settings,
+  Wrench,
+  ShieldCheck,
+  FlaskConical,
+  ServerCog,
+  Braces,
+  Network,
+  MonitorCheck,
+  Palette,
+  PenTool,
+  Bug,
+  Cloud,
+  Container,
+} from "lucide-react";
 
 export function SkillsSection() {
   const skillCategories = [
@@ -32,20 +61,7 @@ export function SkillsSection() {
         { name: "Serverless", proficiency: 70 },
       ],
     },
-    {
-      id: "design",
-      title: "Design & UI/UX",
-      skills: [
-        { name: "Figma", proficiency: 85 },
-        { name: "UI Design", proficiency: 80 },
-        { name: "UX Principles", proficiency: 85 },
-        { name: "Prototyping", proficiency: 75 },
-        { name: "Wireframing", proficiency: 90 },
-        { name: "Design Systems", proficiency: 80 },
-        { name: "Accessibility", proficiency: 85 },
-        { name: "User Research", proficiency: 70 },
-      ],
-    },
+
     {
       id: "other",
       title: "Other Skills",
@@ -60,28 +76,50 @@ export function SkillsSection() {
         { name: "Project Management", proficiency: 85 },
       ],
     },
-  ]
-  
+  ];
+
+  const tools = [
+    { name: "JavaScript", icon: <FileCode size={18} /> },
+    { name: "TypeScript", icon: <FileCode size={18} /> },
+    { name: "React", icon: <Braces size={18} /> },
+    { name: "Next.js", icon: <Terminal size={18} /> },
+    { name: "Node.js", icon: <ServerCog size={18} /> },
+    { name: "Express", icon: <Network size={18} /> },
+    { name: "MongoDB", icon: <Database size={18} /> },
+    { name: "PostgreSQL", icon: <Database size={18} /> },
+    { name: "GraphQL", icon: <Braces size={18} /> },
+    { name: "REST API", icon: <Network size={18} /> },
+    { name: "HTML5", icon: <FileCode size={18} /> },
+    { name: "CSS3", icon: <FileCode size={18} /> },
+    { name: "Tailwind CSS", icon: <Palette size={18} /> },
+    { name: "SASS", icon: <Palette size={18} /> },
+    { name: "Redux", icon: <Settings size={18} /> },
+    { name: "Jest", icon: <Bug size={18} /> },
+    { name: "Git", icon: <GitBranch size={18} /> },
+    { name: "GitHub", icon: <Github size={18} /> },
+    { name: "VS Code", icon: <Code size={18} /> },
+    { name: "AWS", icon: <Cloud size={18} /> },
+    ,
+    { name: "Docker", icon: <Container size={18} /> },
+  ];
+
   return (
     <div className="container px-4 sm:px-6 lg:px-8">
-      <Tabs defaultValue={skillCategories[0].id} className="w-full">
-        <TabsList className="grid w-full grid-cols-2 md:grid-cols-4 mb-8">
-          {skillCategories.map((category) => (
-            <TabsTrigger key={category.id} value={category.id}>
-              {category.title}
-            </TabsTrigger>
-          ))}
-        </TabsList>
-        
+      <Accordion type="multiple" className="w-full space-y-4">
         {skillCategories.map((category) => (
-          <TabsContent key={category.id} value={category.id} className="space-y-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <AccordionItem key={category.id} value={category.id}>
+            <AccordionTrigger className="text-xl font-semibold">
+              {category.title}
+            </AccordionTrigger>
+            <AccordionContent className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
               {category.skills.map((skill, index) => (
                 <Card key={index}>
                   <CardHeader className="pb-2">
                     <div className="flex justify-between items-center">
                       <CardTitle className="text-lg">{skill.name}</CardTitle>
-                      <span className="text-sm text-muted-foreground">{skill.proficiency}%</span>
+                      <span className="text-sm text-muted-foreground">
+                        {skill.proficiency}%
+                      </span>
                     </div>
                   </CardHeader>
                   <CardContent>
@@ -89,30 +127,25 @@ export function SkillsSection() {
                   </CardContent>
                 </Card>
               ))}
-            </div>
-          </TabsContent>
+            </AccordionContent>
+          </AccordionItem>
         ))}
-      </Tabs>
-      
+      </Accordion>
+
       <div className="mt-16">
         <h2 className="text-2xl font-bold mb-6">Tools & Technologies</h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
-          {[
-            "JavaScript", "TypeScript", "React", "Next.js", "Node.js",
-            "Express", "MongoDB", "PostgreSQL", "GraphQL", "REST API",
-            "HTML5", "CSS3", "Tailwind CSS", "SASS", "Redux",
-            "Jest", "Cypress", "Git", "GitHub", "VS Code",
-            "Figma", "AWS", "Vercel", "Firebase", "Docker"
-          ].map((tool, index) => (
+          {tools.map((tool, index) => (
             <div
               key={index}
-              className="rounded-md border px-4 py-3 text-center text-sm font-medium hover:bg-accent hover:text-accent-foreground transition-colors"
+              className="flex items-center gap-3 border rounded-md px-4 py-3 text-sm font-medium hover:bg-accent hover:text-accent-foreground transition-colors"
             >
-              {tool}
+              {tool.icon}
+              {tool.name}
             </div>
           ))}
         </div>
       </div>
     </div>
-  )
+  );
 }
