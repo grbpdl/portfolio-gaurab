@@ -9,13 +9,13 @@ export function Footer() {
           <div className="md:col-span-2">
             <h3 className="text-lg font-semibold mb-4">Portfolio</h3>
             <p className="text-muted-foreground mb-4 max-w-md">
-              A showcase of my professional work, skills, and experience. I
-              specialize in creating modern, responsive, and user-friendly web
-              applications.
+              Full Stack Web Developer and Computer Engineering graduate,
+              specializing in building scalable web applications backend
+              architectures and responsive and dynamic user interfaces.
             </p>
             <div className="flex space-x-4">
               <Link
-                href="https://github.com"
+                href="https://github.com/grbpdl"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="GitHub"
@@ -23,14 +23,14 @@ export function Footer() {
                 <Github className="h-5 w-5 text-muted-foreground hover:text-foreground transition-colors" />
               </Link>
               <Link
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/gaurabpaudyal/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
               >
                 <Linkedin className="h-5 w-5 text-muted-foreground hover:text-foreground transition-colors" />
               </Link>
-              <Link href="mailto:contact@example.com" aria-label="Email">
+              <Link href="mailto:paudyal.gaurab11@gmail.com" aria-label="Email">
                 <Mail className="h-5 w-5 text-muted-foreground hover:text-foreground transition-colors" />
               </Link>
             </div>
@@ -38,7 +38,7 @@ export function Footer() {
 
           <div>
             <h4 className="text-sm font-semibold uppercase tracking-wider mb-4">
-              Navigation
+              Navigations
             </h4>
             <nav className="flex flex-col space-y-2">
               <Link
@@ -83,22 +83,30 @@ export function Footer() {
                 href="/contact"
                 className="text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
-                Contact Form
+                Work/Hire
               </Link>
+              <p className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                <a
+                  href="tel:+9779812905882"
+                  className="hover:text-primary transition-colors"
+                >
+                  +977 9812905882
+                </a>
+              </p>
               <Link
                 href="mailto:contact@example.com"
                 className="text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
-                contact@example.com
+                paudyal.gaurab11@gmail.com
               </Link>
-              <p className="text-sm text-muted-foreground">San Francisco, CA</p>
+              <p className="text-sm text-muted-foreground">Imadol,Lalitpur</p>
             </nav>
           </div>
         </div>
 
         <div className="mt-8 pt-8 border-t">
           <p className="text-sm text-muted-foreground text-center">
-            © {new Date().getFullYear()} Portfolio. All rights reserved.
+            © {new Date().getFullYear()} Gaurab Paudyal. All rights reserved.
           </p>
         </div>
       </div>

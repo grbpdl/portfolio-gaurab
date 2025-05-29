@@ -37,10 +37,10 @@ export default function ContactPage() {
                     <h3 className="text-base font-semibold">Email</h3>
                     <p className="text-muted-foreground">
                       <a
-                        href="mailto:contact@example.com"
+                        href="mailto:paudyal.gaurab11@gmail.com"
                         className="hover:text-primary transition-colors"
                       >
-                        contact@example.com
+                        paudyal.gaurab11@gmail.com
                       </a>
                     </p>
                   </div>
@@ -52,10 +52,10 @@ export default function ContactPage() {
                     <h3 className="text-base font-semibold">Phone</h3>
                     <p className="text-muted-foreground">
                       <a
-                        href="tel:+1234567890"
+                        href="tel:+9779812905882"
                         className="hover:text-primary transition-colors"
                       >
-                        +1 (234) 567-890
+                        +977 9812905882
                       </a>
                     </p>
                   </div>
@@ -65,7 +65,7 @@ export default function ContactPage() {
                   <MapPin className="h-5 w-5 text-primary mt-0.5" />
                   <div>
                     <h3 className="text-base font-semibold">Location</h3>
-                    <p className="text-muted-foreground">San Francisco, CA</p>
+                    <p className="text-muted-foreground">Imadol,Lalitpur</p>
                     <p className="text-muted-foreground">
                       Available for remote work worldwide
                     </p>
@@ -81,7 +81,7 @@ export default function ContactPage() {
                 </p>
                 <div className="flex gap-4">
                   <a
-                    href="https://github.com"
+                    href="https://github.com/grbpdl"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-2 rounded-full bg-secondary hover:bg-secondary/80 transition-colors"
@@ -104,7 +104,7 @@ export default function ContactPage() {
                     </svg>
                   </a>
                   <a
-                    href="https://linkedin.com"
+                    href="https://www.linkedin.com/in/gaurabpaudyal/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-2 rounded-full bg-secondary hover:bg-secondary/80 transition-colors"
@@ -125,28 +125,6 @@ export default function ContactPage() {
                       <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
                       <rect width="4" height="12" x="2" y="9"></rect>
                       <circle cx="4" cy="4" r="2"></circle>
-                    </svg>
-                  </a>
-                  <a
-                    href="https://twitter.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-2 rounded-full bg-secondary hover:bg-secondary/80 transition-colors"
-                    aria-label="Twitter"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="h-5 w-5"
-                    >
-                      <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path>
                     </svg>
                   </a>
                 </div>

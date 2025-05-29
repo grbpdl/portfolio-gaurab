@@ -10,8 +10,9 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Gaurab Paudyal | Full Stack Developer",
-  description:
-    "Explore the portfolio of Gaurab Paudyal, a passionate Full Stack Developer showcasing projects, skills, and professional experience in web development.",
+  description: `Full Stack Web Developer and Computer Engineering graduate, specializing in 
+building scalable web applications backend architectures and responsive and dynamic 
+user interfaces.`,
   authors: [
     { name: "Gaurab Paudyal", url: "https://www.gaurabpaudyal.com.np" },
   ],
