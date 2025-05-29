@@ -29,6 +29,7 @@ import {
   Bug,
   Cloud,
   Container,
+  GitBranchPlus,
 } from "lucide-react";
 
 export function SkillsSection() {
@@ -96,7 +97,7 @@ export function SkillsSection() {
     { name: "Redux", icon: <Settings size={18} /> },
     { name: "Jest", icon: <Bug size={18} /> },
     { name: "Git", icon: <GitBranch size={18} /> },
-    { name: "GitHub", icon: <Github size={18} /> },
+    { name: "GitHub", icon: <GitBranchPlus size={18} /> },
     { name: "VS Code", icon: <Code size={18} /> },
     { name: "AWS", icon: <Cloud size={18} /> },
     ,

@@ -22,17 +22,15 @@ export default function AboutPage() {
                 About Me
               </h1>
               <p className="text-muted-foreground text-lg mb-6">
-                I'm a passionate full-stack developer with 5+ years of
-                experience creating digital solutions that solve real-world
-                problems. My journey in technology started with a curiosity
-                about how things work and evolved into a career building
-                innovative applications.
+                Full Stack Web Developer and Computer Engineering graduate with
+                a strong focus on building scalable web applications and
+                dynamic, user-friendly interfaces.
               </p>
               <p className="text-muted-foreground text-lg mb-6">
-                I believe in writing clean, maintainable code and creating
-                intuitive, user-centered experiences. When I'm not coding, you
-                can find me hiking, reading sci-fi novels, or experimenting with
-                new technologies.
+                Passionate about crafting clean, maintainable code and intuitive
+                digital solutions. When not coding, I enjoy exploring new
+                technologies, hiking, and contributing to open-source
+                communities.
               </p>
               <Button asChild>
                 <Link href="/contact">
@@ -42,7 +40,7 @@ export default function AboutPage() {
             </div>
             <div className="overflow-hidden rounded-lg border">
               <img
-                src="https://images.pexels.com/photos/5989935/pexels-photo-5989935.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                src="https://images.pexels.com/photos/5989935/pexels-photo-5989935.jpeg"
                 alt="Portrait"
                 className="h-full w-full object-cover"
               />
@@ -64,25 +62,25 @@ export default function AboutPage() {
               <Timeline
                 items={[
                   {
-                    title: "Senior Developer",
-                    company: "Tech Innovations Inc.",
-                    duration: "2021 - Present",
+                    title: "Full Stack Developer",
+                    company: "Tootle (Nepal's First Ride Sharing Company)",
+                    duration: "August 2024 - Present",
                     description:
-                      "Lead developer on multiple high-profile projects, managing teams and architecting scalable solutions.",
+                      "Implemented microservice architecture and monorepo structure to scale systems handling thousands of concurrent users and millions of API requests.",
                   },
                   {
                     title: "Full Stack Developer",
-                    company: "Digital Solutions Lab",
-                    duration: "2018 - 2021",
+                    company: "Lyara Innovations (Remote Work)",
+                    duration: "Feb 2024 - June 2024",
                     description:
-                      "Built and maintained full-stack applications, focusing on clean code and optimal performance.",
+                      "Used MERN stack to develop and Dockerize projects, and conducted QA testing to ensure high reliability.",
                   },
                   {
-                    title: "Front-End Developer",
-                    company: "WebCraft Studios",
-                    duration: "2016 - 2018",
+                    title: "Freelance Developer",
+                    company: "Upwork",
+                    duration: "July 2023 - Feb 2024",
                     description:
-                      "Developed responsive and accessible user interfaces for a variety of clients across different industries.",
+                      "Built an e-commerce platform, integrated APIs, optimized databases, and designed modern, responsive UIs for various client projects.",
                   },
                 ]}
               />
@@ -92,25 +90,26 @@ export default function AboutPage() {
               <Timeline
                 items={[
                   {
-                    title: "Master of Computer Science",
-                    company: "Tech University",
-                    duration: "2014 - 2016",
+                    title: "Bachelors in Computer Engineering",
+                    company:
+                      "Nepal College of Information Technology, Lalitpur",
+                    duration: "2019 - 2024",
                     description:
-                      "Specialized in Human-Computer Interaction and Software Engineering.",
+                      "Graduated with an SGPA of 3.95/4. Specialized in full stack development and backend architecture.",
                   },
                   {
-                    title: "Bachelor of Science in Information Technology",
-                    company: "State University",
-                    duration: "2010 - 2014",
+                    title: "Higher Secondary Education (XII)",
+                    company: "Kalika Manvagyan Secondary School, Butwal",
+                    duration: "2017 - 2019",
                     description:
-                      "Graduated with honors. Focus on web development and database systems.",
+                      "Completed with GPA of 3.10/4. Focused on science and technology subjects.",
                   },
                   {
-                    title: "Professional Certifications",
-                    company: "Various Institutions",
-                    duration: "2015 - Present",
+                    title: "Secondary Education (SEE)",
+                    company: "Kalika Manvagyan Secondary School, Butwal",
+                    duration: "2015 - 2016",
                     description:
-                      "AWS Certified Solutions Architect, Google Cloud Professional, React Certification.",
+                      "Achieved GPA of 3.65/4 in final national board exams.",
                   },
                 ]}
               />
@@ -120,34 +119,34 @@ export default function AboutPage() {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {[
                   {
-                    title: "User-Centered Design",
+                    title: "Clean Code & Maintainability",
                     description:
-                      "I believe in putting users first, creating intuitive experiences that solve real problems.",
+                      "I prioritize writing code that's efficient, readable, and easy to maintain.",
                   },
                   {
-                    title: "Clean, Maintainable Code",
+                    title: "Scalable Architecture",
                     description:
-                      "Writing code that's not just functional but sustainable and easy for others to understand.",
+                      "My work focuses on designing scalable systems using microservices and modular monorepo setups.",
                   },
                   {
                     title: "Continuous Learning",
                     description:
-                      "Technology evolves rapidly, and I'm committed to growing my skills and knowledge.",
+                      "I'm dedicated to expanding my technical skills through hands-on work and community involvement.",
+                  },
+                  {
+                    title: "User-Focused Interfaces",
+                    description:
+                      "Every design decision I make is grounded in enhancing the user experience.",
                   },
                   {
                     title: "Collaborative Development",
                     description:
-                      "The best solutions emerge from diverse perspectives and effective teamwork.",
+                      "Open-source participation and team-based projects are central to my professional growth.",
                   },
                   {
-                    title: "Performance Matters",
+                    title: "Performance Optimization",
                     description:
-                      "Speed and efficiency are crucial to user experience and should never be an afterthought.",
-                  },
-                  {
-                    title: "Accessibility for All",
-                    description:
-                      "Building inclusive digital experiences that work for everyone, regardless of ability.",
+                      "I strive to build systems that are not only functional but also fast and responsive.",
                   },
                 ].map((item, index) => (
                   <Card key={index}>
@@ -172,9 +171,9 @@ export default function AboutPage() {
           <div className="rounded-lg bg-primary/5 border border-primary/10 px-6 py-8 md:p-12">
             <h2 className="text-2xl font-bold mb-4">Let's Work Together</h2>
             <p className="text-muted-foreground mb-6">
-              I'm always interested in new challenges and collaborative
-              opportunities. Whether you have a specific project in mind or just
-              want to connect, I'd love to hear from you.
+              Open to new challenges and collaborative opportunities. Whether
+              it's a freelance gig, startup idea, or full-time project, feel
+              free to reach out.
             </p>
             <Button asChild>
               <Link href="/contact">
