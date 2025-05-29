@@ -1,11 +1,12 @@
-import { Metadata } from "next"
-import { BlogPostCard } from "@/components/blog-post-card"
-import { blogsData } from "@/data/blogs"
+import { Metadata } from "next";
+import { BlogPostCard } from "@/components/blog-post-card";
+import { blogsData } from "@/data/blogs";
 
 export const metadata: Metadata = {
-  title: "Blog | Professional Portfolio",
-  description: "Articles, tutorials, and thoughts on web development, design, and technology",
-}
+  title: "Blog | Gaurab Paudyal",
+  description:
+    "Articles, tutorials, and thoughts on web development, design, and technology",
+};
 
 export default function BlogPage() {
   return (
@@ -21,7 +22,7 @@ export default function BlogPage() {
           </p>
         </div>
       </div>
-      
+
       <div className="container px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-6xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {blogsData.map((post, index) => (
@@ -30,5 +31,5 @@ export default function BlogPage() {
         </div>
       </div>
     </div>
-  )
+  );
 }

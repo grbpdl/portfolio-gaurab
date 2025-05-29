@@ -1,11 +1,11 @@
-import { Metadata } from "next"
-import { ProjectFilter } from "@/components/project-filter"
-import { ProjectGrid } from "@/components/project-grid"
+import { Metadata } from "next";
+import { ProjectFilter } from "@/components/project-filter";
+import { ProjectGrid } from "@/components/project-grid";
 
 export const metadata: Metadata = {
-  title: "Projects | Professional Portfolio",
+  title: "Projects | Gaurab Paudyal",
   description: "Explore my portfolio of web development and design projects",
-}
+};
 
 export default function ProjectsPage() {
   return (
@@ -21,7 +21,7 @@ export default function ProjectsPage() {
           </p>
         </div>
       </div>
-      
+
       <div className="container px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-6xl">
           <ProjectFilter />
@@ -29,5 +29,5 @@ export default function ProjectsPage() {
         </div>
       </div>
     </div>
-  )
+  );
 }

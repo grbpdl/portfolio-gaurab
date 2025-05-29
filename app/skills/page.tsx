@@ -1,10 +1,10 @@
-import { Metadata } from "next"
-import { SkillsSection } from "@/components/skills-section"
+import { Metadata } from "next";
+import { SkillsSection } from "@/components/skills-section";
 
 export const metadata: Metadata = {
-  title: "Skills | Professional Portfolio",
+  title: "Skills | Gaurab Paudyal",
   description: "Explore my technical skills, tools, and areas of expertise",
-}
+};
 
 export default function SkillsPage() {
   return (
@@ -15,13 +15,13 @@ export default function SkillsPage() {
             Skills & Expertise
           </h1>
           <p className="text-muted-foreground text-lg mx-auto max-w-[700px]">
-            A comprehensive overview of my technical skills, tools, and areas of expertise
-            developed throughout my professional journey.
+            A comprehensive overview of my technical skills, tools, and areas of
+            expertise developed throughout my professional journey.
           </p>
         </div>
       </div>
-      
+
       <SkillsSection />
     </div>
-  )
+  );
 }

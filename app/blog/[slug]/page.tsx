@@ -1,35 +1,39 @@
-import { Metadata } from "next"
-import Link from "next/link"
-import { ArrowLeft, Calendar, Clock } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import { Separator } from "@/components/ui/separator"
-import { blogsData } from "@/data/blogs"
+import { Metadata } from "next";
+import Link from "next/link";
+import { ArrowLeft, Calendar, Clock } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { Separator } from "@/components/ui/separator";
+import { blogsData } from "@/data/blogs";
 
 export async function generateStaticParams() {
   return blogsData.map((post) => ({
     slug: post.slug,
-  }))
+  }));
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
-  const post = blogsData.find((p) => p.slug === params.slug)
-  
+export function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}): Metadata {
+  const post = blogsData.find((p) => p.slug === params.slug);
+
   if (!post) {
     return {
-      title: 'Blog Post Not Found',
-    }
+      title: "Blog Post Not Found",
+    };
   }
-  
+
   return {
-    title: `${post.title} | Professional Portfolio`,
+    title: `${post.title} |Gaurab Paudyal`,
     description: post.excerpt,
-  }
+  };
 }
 
 export default function BlogPostPage({ params }: { params: { slug: string } }) {
-  const post = blogsData.find((p) => p.slug === params.slug)
-  
+  const post = blogsData.find((p) => p.slug === params.slug);
+
   if (!post) {
     return (
       <div className="container mx-auto px-4 py-16 text-center">
@@ -43,9 +47,9 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
           </Link>
         </Button>
       </div>
-    )
+    );
   }
-  
+
   // This would be replaced with actual content from a CMS or markdown file
   const articleContent = `
     <h2>Introduction</h2>
@@ -96,8 +100,8 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
       Thank you for reading this article. I hope you found it informative and useful for your projects.
       If you have any questions or comments, please feel free to reach out.
     </p>
-  `
-  
+  `;
+
   return (
     <div className="flex flex-col gap-12 pb-16 pt-24 sm:pt-32">
       <div className="container px-4 sm:px-6 lg:px-8">
@@ -107,7 +111,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
               <ArrowLeft className="mr-2 h-4 w-4" /> Back to Blog
             </Link>
           </Button>
-          
+
           <div className="mb-6">
             <div className="flex flex-wrap gap-2 mb-4">
               {post.categories.map((category) => (
@@ -116,11 +120,11 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
                 </Badge>
               ))}
             </div>
-            
+
             <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-4">
               {post.title}
             </h1>
-            
+
             <div className="flex items-center gap-6 text-muted-foreground mb-6">
               <div className="flex items-center">
                 <Calendar className="mr-2 h-4 w-4" />
@@ -132,7 +136,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
               </div>
             </div>
           </div>
-          
+
           <div className="mb-10 overflow-hidden rounded-lg border">
             <img
               src={post.coverImage}
@@ -140,46 +144,49 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
               className="w-full h-full object-cover aspect-[2/1]"
             />
           </div>
-          
+
           <article className="prose prose-stone dark:prose-invert max-w-none">
             <div dangerouslySetInnerHTML={{ __html: articleContent }} />
           </article>
-          
+
           <Separator className="my-12" />
-          
+
           <div>
             <h3 className="text-xl font-bold mb-6">Related Articles</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {blogsData.filter(p => p.slug !== post.slug).slice(0, 2).map((relatedPost, index) => (
-                <Link 
-                  key={index} 
-                  href={`/blog/${relatedPost.slug}`}
-                  className="group"
-                >
-                  <div className="flex gap-4">
-                    <div className="h-20 w-20 rounded overflow-hidden flex-shrink-0">
-                      <img
-                        src={relatedPost.coverImage}
-                        alt={relatedPost.title}
-                        className="h-full w-full object-cover"
-                      />
-                    </div>
-                    <div>
-                      <h4 className="font-medium group-hover:text-primary transition-colors line-clamp-2">
-                        {relatedPost.title}
-                      </h4>
-                      <div className="flex items-center text-xs text-muted-foreground mt-1">
-                        <Calendar className="mr-1 h-3 w-3" />
-                        <span>{relatedPost.date}</span>
+              {blogsData
+                .filter((p) => p.slug !== post.slug)
+                .slice(0, 2)
+                .map((relatedPost, index) => (
+                  <Link
+                    key={index}
+                    href={`/blog/${relatedPost.slug}`}
+                    className="group"
+                  >
+                    <div className="flex gap-4">
+                      <div className="h-20 w-20 rounded overflow-hidden flex-shrink-0">
+                        <img
+                          src={relatedPost.coverImage}
+                          alt={relatedPost.title}
+                          className="h-full w-full object-cover"
+                        />
+                      </div>
+                      <div>
+                        <h4 className="font-medium group-hover:text-primary transition-colors line-clamp-2">
+                          {relatedPost.title}
+                        </h4>
+                        <div className="flex items-center text-xs text-muted-foreground mt-1">
+                          <Calendar className="mr-1 h-3 w-3" />
+                          <span>{relatedPost.date}</span>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </Link>
-              ))}
+                  </Link>
+                ))}
             </div>
           </div>
         </div>
       </div>
     </div>
-  )
+  );
 }
