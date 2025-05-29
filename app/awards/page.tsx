@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
+import ImageCarousel from "@/components/image-carousel";
 
 const awards = [
   {
@@ -9,7 +10,11 @@ const awards = [
     date: "December 2023",
     description:
       "Recognized for developing an innovative AI-powered solution that revolutionizes user experience in web applications.",
-    image: "https://images.pexels.com/photos/7235679/pexels-photo-7235679.jpeg",
+    images: [
+      "https://images.pexels.com/photos/7235679/pexels-photo-7235679.jpeg",
+      "https://images.pexels.com/photos/7235680/pexels-photo-7235680.jpeg",
+      "https://images.pexels.com/photos/7235681/pexels-photo-7235681.jpeg",
+    ],
   },
   {
     title: "Outstanding Developer of the Year",
@@ -17,7 +22,11 @@ const awards = [
     date: "September 2023",
     description:
       "Awarded for exceptional contributions to open-source projects and community development initiatives.",
-    image: "https://images.pexels.com/photos/7235680/pexels-photo-7235680.jpeg",
+    images: [
+      "https://images.pexels.com/photos/7235679/pexels-photo-7235679.jpeg",
+      "https://images.pexels.com/photos/7235680/pexels-photo-7235680.jpeg",
+      "https://images.pexels.com/photos/7235681/pexels-photo-7235681.jpeg",
+    ],
   },
   {
     title: "Hackathon Champion",
@@ -25,7 +34,11 @@ const awards = [
     date: "July 2023",
     description:
       "Led a team to victory in developing a sustainable technology solution for environmental monitoring.",
-    image: "https://images.pexels.com/photos/7235681/pexels-photo-7235681.jpeg",
+    images: [
+      "https://images.pexels.com/photos/7235679/pexels-photo-7235679.jpeg",
+      "https://images.pexels.com/photos/7235680/pexels-photo-7235680.jpeg",
+      "https://images.pexels.com/photos/7235681/pexels-photo-7235681.jpeg",
+    ],
   },
 ];
 
@@ -57,11 +70,7 @@ export default function AwardsPage() {
               <Card className="overflow-hidden">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="aspect-video relative overflow-hidden">
-                    <img
-                      src={award.image}
-                      alt={award.title}
-                      className="object-cover w-full h-full"
-                    />
+                    <ImageCarousel images={award.images} />
                   </div>
                   <CardContent className="p-6 flex flex-col justify-center">
                     <div className="space-y-4">
