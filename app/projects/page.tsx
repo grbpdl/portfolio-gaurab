@@ -24,7 +24,7 @@ export default function ProjectsPage() {
 
       <div className="container px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-6xl">
-          <ProjectFilter />
+          {/* <ProjectFilter /> */}
           <ProjectGrid />
         </div>
       </div>
