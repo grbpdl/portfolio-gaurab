@@ -33,21 +33,6 @@ export const metadata: Metadata = {
     "Developer Portfolio",
     "Personal Website",
   ],
-  openGraph: {
-    type: "website",
-    locale: "en_US",
-    url: "https://www.gaurabpaudyal.com.np",
-    title: "Gaurab Paudyal | Full Stack Developer",
-    description:
-      "Discover Gaurab Paudyal's portfolio featuring modern web applications, full stack projects, and development expertise.",
-    siteName: "Gaurab Paudyal Portfolio",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Gaurab Paudyal | Full Stack Developer",
-    description:
-      "Showcasing the work and skills of Gaurab Paudyal, a creative and efficient Full Stack Developer.",
-  },
 };
 
 export default function RootLayout({

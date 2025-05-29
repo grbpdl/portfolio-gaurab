@@ -1,35 +1,33 @@
-import { Metadata } from "next"
-import { motion } from "framer-motion"
-import { Card, CardContent } from "@/components/ui/card"
-
-export const metadata: Metadata = {
-  title: "Awards & Achievements | Gaurab Paudyal",
-  description: "Recognition and milestones in my professional journey",
-}
+"use client";
+import { motion } from "framer-motion";
+import { Card, CardContent } from "@/components/ui/card";
 
 const awards = [
   {
     title: "Best Innovation Award",
     organization: "Tech Summit 2023",
     date: "December 2023",
-    description: "Recognized for developing an innovative AI-powered solution that revolutionizes user experience in web applications.",
-    image: "https://images.pexels.com/photos/7235679/pexels-photo-7235679.jpeg"
+    description:
+      "Recognized for developing an innovative AI-powered solution that revolutionizes user experience in web applications.",
+    image: "https://images.pexels.com/photos/7235679/pexels-photo-7235679.jpeg",
   },
   {
     title: "Outstanding Developer of the Year",
     organization: "Developer's Association",
     date: "September 2023",
-    description: "Awarded for exceptional contributions to open-source projects and community development initiatives.",
-    image: "https://images.pexels.com/photos/7235680/pexels-photo-7235680.jpeg"
+    description:
+      "Awarded for exceptional contributions to open-source projects and community development initiatives.",
+    image: "https://images.pexels.com/photos/7235680/pexels-photo-7235680.jpeg",
   },
   {
     title: "Hackathon Champion",
     organization: "Global Code Fest",
     date: "July 2023",
-    description: "Led a team to victory in developing a sustainable technology solution for environmental monitoring.",
-    image: "https://images.pexels.com/photos/7235681/pexels-photo-7235681.jpeg"
-  }
-]
+    description:
+      "Led a team to victory in developing a sustainable technology solution for environmental monitoring.",
+    image: "https://images.pexels.com/photos/7235681/pexels-photo-7235681.jpeg",
+  },
+];
 
 export default function AwardsPage() {
   return (
@@ -40,7 +38,8 @@ export default function AwardsPage() {
             Awards & Achievements
           </h1>
           <p className="text-muted-foreground text-lg mx-auto max-w-[700px]">
-            Recognition and milestones that mark my journey in technology and innovation.
+            Recognition and milestones that mark my journey in technology and
+            innovation.
           </p>
         </div>
       </div>
@@ -85,5 +84,5 @@ export default function AwardsPage() {
         </div>
       </div>
     </div>
-  )
+  );
 }
