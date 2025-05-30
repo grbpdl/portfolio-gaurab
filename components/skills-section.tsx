@@ -8,29 +8,45 @@ import {
 } from "@/components/ui/accordion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
-  Code,
   FileCode,
-  GitBranch,
-  Github,
-  Terminal,
-  Database,
-  Layers,
-  Figma,
-  Settings,
-  Wrench,
-  ShieldCheck,
-  FlaskConical,
-  ServerCog,
   Braces,
+  Terminal,
+  ServerCog,
   Network,
-  MonitorCheck,
+  Database,
   Palette,
-  PenTool,
+  Settings,
   Bug,
+  GitBranch,
+  GitBranchPlus,
+  Code,
   Cloud,
   Container,
-  GitBranchPlus,
 } from "lucide-react";
+
+const tools = [
+  { name: "JavaScript", icon: <FileCode size={18} /> },
+  { name: "TypeScript", icon: <FileCode size={18} /> },
+  { name: "React", icon: <Braces size={18} /> },
+  { name: "Next.js", icon: <Terminal size={18} /> },
+  { name: "Node.js", icon: <ServerCog size={18} /> },
+  { name: "Express", icon: <Network size={18} /> },
+  { name: "MongoDB", icon: <Database size={18} /> },
+  { name: "PostgreSQL", icon: <Database size={18} /> },
+  { name: "GraphQL", icon: <Braces size={18} /> },
+  { name: "REST API", icon: <Network size={18} /> },
+  { name: "HTML5", icon: <FileCode size={18} /> },
+  { name: "CSS3", icon: <FileCode size={18} /> },
+  { name: "Tailwind CSS", icon: <Palette size={18} /> },
+  { name: "SASS", icon: <Palette size={18} /> },
+  { name: "Redux", icon: <Settings size={18} /> },
+  { name: "Jest", icon: <Bug size={18} /> },
+  { name: "Git", icon: <GitBranch size={18} /> },
+  { name: "GitHub", icon: <GitBranchPlus size={18} /> },
+  { name: "VS Code", icon: <Code size={18} /> },
+  { name: "AWS", icon: <Cloud size={18} /> },
+  { name: "Docker", icon: <Container size={18} /> },
+];
 
 export function SkillsSection() {
   const skillCategories = [
@@ -77,31 +93,6 @@ export function SkillsSection() {
         { name: "Project Management", proficiency: 85 },
       ],
     },
-  ];
-
-  const tools = [
-    { name: "JavaScript", icon: <FileCode size={18} /> },
-    { name: "TypeScript", icon: <FileCode size={18} /> },
-    { name: "React", icon: <Braces size={18} /> },
-    { name: "Next.js", icon: <Terminal size={18} /> },
-    { name: "Node.js", icon: <ServerCog size={18} /> },
-    { name: "Express", icon: <Network size={18} /> },
-    { name: "MongoDB", icon: <Database size={18} /> },
-    { name: "PostgreSQL", icon: <Database size={18} /> },
-    { name: "GraphQL", icon: <Braces size={18} /> },
-    { name: "REST API", icon: <Network size={18} /> },
-    { name: "HTML5", icon: <FileCode size={18} /> },
-    { name: "CSS3", icon: <FileCode size={18} /> },
-    { name: "Tailwind CSS", icon: <Palette size={18} /> },
-    { name: "SASS", icon: <Palette size={18} /> },
-    { name: "Redux", icon: <Settings size={18} /> },
-    { name: "Jest", icon: <Bug size={18} /> },
-    { name: "Git", icon: <GitBranch size={18} /> },
-    { name: "GitHub", icon: <GitBranchPlus size={18} /> },
-    { name: "VS Code", icon: <Code size={18} /> },
-    { name: "AWS", icon: <Cloud size={18} /> },
-    ,
-    { name: "Docker", icon: <Container size={18} /> },
   ];
 
   return (
