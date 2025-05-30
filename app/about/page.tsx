@@ -40,7 +40,7 @@ export default function AboutPage() {
             </div>
             <div className="overflow-hidden rounded-lg border">
               <img
-                src="https://images.pexels.com/photos/5989935/pexels-photo-5989935.jpeg"
+                src="https://res.cloudinary.com/dazmdsylh/image/upload/v1748616541/gaurab_hult_ceuk2c.jpg"
                 alt="Portrait"
                 className="h-full w-full object-cover"
               />

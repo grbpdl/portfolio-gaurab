@@ -1,8 +1,8 @@
-import Link from "next/link"
-import { ArrowUpRight } from "lucide-react"
-import { Badge } from "@/components/ui/badge"
-import { Card, CardContent, CardFooter } from "@/components/ui/card"
-import { projectsData } from "@/data/projects"
+import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import { projectsData } from "@/data/projects";
 
 export function ProjectGrid() {
   return (
@@ -16,7 +16,7 @@ export function ProjectGrid() {
               className="object-cover w-full h-full"
             />
           </div>
-          
+
           <CardContent className="p-6 flex-1">
             <div className="flex flex-wrap gap-2 mb-3">
               {project.tags.map((tag) => (
@@ -25,17 +25,19 @@ export function ProjectGrid() {
                 </Badge>
               ))}
             </div>
-            
+
             <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-            <p className="text-muted-foreground text-sm mb-4">{project.description}</p>
+            <p className="text-muted-foreground text-sm mb-4">
+              {project.description}
+            </p>
           </CardContent>
-          
+
           <CardFooter className="px-6 pb-6 pt-0 flex justify-between">
             <Link
-              href={project.detailLink}
+              href={project.liveLink}
               className="text-sm font-medium text-primary hover:underline flex items-center"
             >
-              Case Study
+              View on Github
             </Link>
             {project.liveLink && (
               <Link
@@ -51,5 +53,5 @@ export function ProjectGrid() {
         </Card>
       ))}
     </div>
-  )
+  );
 }

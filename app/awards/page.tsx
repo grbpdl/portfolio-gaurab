@@ -5,39 +5,51 @@ import ImageCarousel from "@/components/image-carousel";
 
 const awards = [
   {
-    title: "Best Innovation Award",
-    organization: "Tech Summit 2023",
+    title: "Coding Compettion at IIT Bombay India",
+    organization: "IIT Bombay",
     date: "December 2023",
     description:
-      "Recognized for developing an innovative AI-powered solution that revolutionizes user experience in web applications.",
+      "Took Part in CodeDecode Compettion held in India by being selected in regional level in Nepal",
     images: [
-      "https://images.pexels.com/photos/7235679/pexels-photo-7235679.jpeg",
-      "https://images.pexels.com/photos/7235680/pexels-photo-7235680.jpeg",
-      "https://images.pexels.com/photos/7235681/pexels-photo-7235681.jpeg",
+      "https://res.cloudinary.com/dazmdsylh/image/upload/v1748616535/iit1_xag1w4.jpg",
+      "https://res.cloudinary.com/dazmdsylh/image/upload/v1748616537/iit3_zrxm8v.jpg",
+      "https://res.cloudinary.com/dazmdsylh/image/upload/v1748616536/iit2_hpfkei.jpg",
     ],
   },
   {
-    title: "Outstanding Developer of the Year",
-    organization: "Developer's Association",
-    date: "September 2023",
-    description:
-      "Awarded for exceptional contributions to open-source projects and community development initiatives.",
-    images: [
-      "https://images.pexels.com/photos/7235679/pexels-photo-7235679.jpeg",
-      "https://images.pexels.com/photos/7235680/pexels-photo-7235680.jpeg",
-      "https://images.pexels.com/photos/7235681/pexels-photo-7235681.jpeg",
-    ],
-  },
-  {
-    title: "Hackathon Champion",
-    organization: "Global Code Fest",
+    title: "4 weeks Techonprenaurship Tranning and Pitch",
+    organization: "University Grants Commision",
     date: "July 2023",
     description:
-      "Led a team to victory in developing a sustainable technology solution for environmental monitoring.",
+      "An Techonprenaurship traning and the idea pitch session of your own startup.",
     images: [
-      "https://images.pexels.com/photos/7235679/pexels-photo-7235679.jpeg",
-      "https://images.pexels.com/photos/7235680/pexels-photo-7235680.jpeg",
-      "https://images.pexels.com/photos/7235681/pexels-photo-7235681.jpeg",
+      "https://res.cloudinary.com/dazmdsylh/image/upload/v1718263428/photo_2023-12-09_14-38-48_r66vmj.jpg",
+      "https://res.cloudinary.com/dazmdsylh/image/upload/v1718263425/photo_2023-12-09_14-38-37_e1eies.jpg",
+      "https://res.cloudinary.com/dazmdsylh/image/upload/v1718263428/photo_2023-12-09_14-38-51_ylztvq.jpg",
+    ],
+  },
+  {
+    title: "Hult Prize at NCIT by UN",
+    organization: "United Nations",
+    date: "December 2022",
+    description:
+      "Participated in Hult Prize at Ncit,UN as well as worked in its Organizing Committee.",
+    images: [
+      "https://res.cloudinary.com/dazmdsylh/image/upload/v1748616538/hult2_aritch.jpg",
+      "https://res.cloudinary.com/dazmdsylh/image/upload/v1748616534/hult1_gkdydi.jpg",
+      "https://res.cloudinary.com/dazmdsylh/image/upload/v1748616547/hult3_rgoe2b.jpg",
+    ],
+  },
+  {
+    title: "Nepal Open Source Club",
+    organization: "NOSK",
+    date: "September 2022",
+    description:
+      "Promoting Open Source Software as well as Software Freedom Day in College through an IT club NOSK.",
+    images: [
+      "https://res.cloudinary.com/dazmdsylh/image/upload/v1748616545/sfd2_jftqhd.jpg",
+      "https://res.cloudinary.com/dazmdsylh/image/upload/v1718263439/photo_2023-12-09_14-38-58_myutfe.jpg",
+      "https://res.cloudinary.com/dazmdsylh/image/upload/v1718263353/IMG_20220722_163347_1_z1v63d.jpg",
     ],
   },
 ];

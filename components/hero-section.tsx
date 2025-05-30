@@ -51,7 +51,7 @@ export function HeroSection() {
             </Button>
             <Button size="lg" variant="outline" asChild>
               <Link
-                href="/resume.pdf"
+                href="https://drive.google.com/file/d/1OxwVz6fC_e7nI6z-1niN1_8lYUgO2L03/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -68,7 +68,7 @@ export function HeroSection() {
           className="relative aspect-square rounded-full overflow-hidden border-4 border-primary/10"
         >
           <Image
-            src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg"
+            src="https://res.cloudinary.com/dazmdsylh/image/upload/v1748617116/convocation_myjibz.jpg"
             alt="Gaurab Paudyal"
             fill
             className="object-cover"
