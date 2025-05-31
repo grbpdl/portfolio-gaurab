@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Download, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { motion } from "-motion";
+import { motion } from "framer-motion";
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
 
