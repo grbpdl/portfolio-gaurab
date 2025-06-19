@@ -1,79 +1,12 @@
-"use client";
-
 import { Metadata } from "next";
-import { Progress } from "@/components/ui/progress";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-
-import {
-  FiFile,
-  FiCode,
-  FiTerminal,
-  FiServer,
-  FiShare2,
-  FiDatabase,
-  FiPackage,
-  FiSettings,
-  FiGitBranch,
-  FiGithub,
-  FiCloud,
-  FiBox,
-} from "react-icons/fi";
-import { AiOutlineBug } from "react-icons/ai";
 
 export const metadata: Metadata = {
   title: "Skills | Gaurab Paudyal",
   description: "Explore my technical skills, tools, and areas of expertise",
 };
 
-interface Tool {
-  name: string;
-  icon: React.ReactElement;
-}
-
-const tools: Tool[] = [
-  { name: "JavaScript", icon: <FiFile size={18} /> },
-  { name: "TypeScript", icon: <FiCode size={18} /> },
-  { name: "React", icon: <FiCode size={18} /> },
-  { name: "Next.js", icon: <FiTerminal size={18} /> },
-  { name: "Node.js", icon: <FiServer size={18} /> },
-  { name: "Express", icon: <FiShare2 size={18} /> },
-  { name: "MongoDB", icon: <FiDatabase size={18} /> },
-  { name: "PostgreSQL", icon: <FiDatabase size={18} /> },
-  { name: "GraphQL", icon: <FiCode size={18} /> },
-  { name: "REST API", icon: <FiShare2 size={18} /> },
-  { name: "HTML5", icon: <FiFile size={18} /> },
-  { name: "CSS3", icon: <FiCode size={18} /> },
-  { name: "Tailwind CSS", icon: <FiPackage size={18} /> },
-  { name: "SASS", icon: <FiPackage size={18} /> },
-  { name: "Redux", icon: <FiSettings size={18} /> },
-  { name: "Jest", icon: <AiOutlineBug size={18} /> },
-  { name: "Git", icon: <FiGitBranch size={18} /> },
-  { name: "GitHub", icon: <FiGithub size={18} /> },
-  { name: "VS Code", icon: <FiCode size={18} /> },
-  { name: "AWS", icon: <FiCloud size={18} /> },
-  { name: "Docker", icon: <FiBox size={18} /> },
-];
-
-interface Skill {
-  name: string;
-  proficiency: number;
-}
-
-interface SkillCategory {
-  id: string;
-  title: string;
-  skills: Skill[];
-}
-
-const skillCategories: SkillCategory[] = [
+const skillCategories = [
   {
-    id: "frontend",
     title: "Frontend Development",
     skills: [
       { name: "React / Next.js", proficiency: 95 },
@@ -87,7 +20,6 @@ const skillCategories: SkillCategory[] = [
     ],
   },
   {
-    id: "backend",
     title: "Backend Development",
     skills: [
       { name: "Node.js", proficiency: 85 },
@@ -101,7 +33,6 @@ const skillCategories: SkillCategory[] = [
     ],
   },
   {
-    id: "other",
     title: "Other Skills",
     skills: [
       { name: "Git / GitHub", proficiency: 90 },
@@ -114,6 +45,30 @@ const skillCategories: SkillCategory[] = [
       { name: "Project Management", proficiency: 85 },
     ],
   },
+];
+
+const tools = [
+  "JavaScript",
+  "TypeScript",
+  "React",
+  "Next.js",
+  "Node.js",
+  "Express",
+  "MongoDB",
+  "PostgreSQL",
+  "GraphQL",
+  "REST API",
+  "HTML5",
+  "CSS3",
+  "Tailwind CSS",
+  "SASS",
+  "Redux",
+  "Jest",
+  "Git",
+  "GitHub",
+  "VS Code",
+  "AWS",
+  "Docker",
 ];
 
 export default function SkillsPage() {
@@ -131,44 +86,43 @@ export default function SkillsPage() {
         </div>
       </div>
 
-      <div className="container px-4 sm:px-6 lg:px-8">
-        <Accordion type="multiple" className="w-full space-y-4">
-          {skillCategories.map((category) => (
-            <AccordionItem key={category.id} value={category.id}>
-              <AccordionTrigger className="text-xl font-semibold">
-                {category.title}
-              </AccordionTrigger>
-              <AccordionContent className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
-                {category.skills.map((skill, idx) => (
-                  <Card key={idx}>
-                    <CardHeader className="pb-2">
-                      <div className="flex justify-between items-center">
-                        <CardTitle className="text-lg">{skill.name}</CardTitle>
-                        <span className="text-sm text-muted-foreground">
-                          {skill.proficiency}%
-                        </span>
-                      </div>
-                    </CardHeader>
-                    <CardContent>
-                      <Progress value={skill.proficiency} className="h-2" />
-                    </CardContent>
-                  </Card>
-                ))}
-              </AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
+      {/* Skill Categories */}
+      <div className="container px-4 sm:px-6 lg:px-8 space-y-12">
+        {skillCategories.map((category, idx) => (
+          <div key={idx}>
+            <h2 className="text-2xl font-semibold mb-4">{category.title}</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {category.skills.map((skill, i) => (
+                <div
+                  key={i}
+                  className="border rounded-lg p-4 shadow-sm bg-muted/30"
+                >
+                  <div className="flex justify-between mb-2 font-medium">
+                    <span>{skill.name}</span>
+                    <span>{skill.proficiency}%</span>
+                  </div>
+                  <div className="w-full h-2 bg-gray-200 rounded-full">
+                    <div
+                      className="h-full bg-primary rounded-full"
+                      style={{ width: `${skill.proficiency}%` }}
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
 
-        <div className="mt-16">
-          <h2 className="text-2xl font-bold mb-6">Tools & Technologies</h2>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
-            {tools.map((tool, idx) => (
+        {/* Tools */}
+        <div>
+          <h2 className="text-2xl font-semibold mb-4">Tools & Technologies</h2>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
+            {tools.map((tool, i) => (
               <div
-                key={idx}
-                className="flex items-center gap-3 border rounded-md px-4 py-3 text-sm font-medium hover:bg-accent hover:text-accent-foreground transition-colors"
+                key={i}
+                className="text-sm font-medium px-4 py-2 rounded border hover:bg-accent hover:text-accent-foreground transition-colors"
               >
-                {tool.icon}
-                {tool.name}
+                {tool}
               </div>
             ))}
           </div>
