@@ -1,4 +1,5 @@
 "use client";
+
 import { Progress } from "@/components/ui/progress";
 import {
   Accordion,
@@ -7,34 +8,40 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+
 import {
   FileCode,
   Braces,
   Terminal,
-  ServerCog,
-  Network,
+  Server,
+  Share2,
   Database,
   Palette,
   Settings,
   Bug,
   GitBranch,
-  GitBranchPlus,
+  Github,
   Code,
   Cloud,
-  Container,
+  Box,
 } from "lucide-react";
 
-const tools = [
+interface Tool {
+  name: string;
+  icon: JSX.Element;
+}
+
+const tools: Tool[] = [
   { name: "JavaScript", icon: <FileCode size={18} /> },
   { name: "TypeScript", icon: <FileCode size={18} /> },
   { name: "React", icon: <Braces size={18} /> },
   { name: "Next.js", icon: <Terminal size={18} /> },
-  { name: "Node.js", icon: <ServerCog size={18} /> },
-  { name: "Express", icon: <Network size={18} /> },
+  { name: "Node.js", icon: <Server size={18} /> },
+  { name: "Express", icon: <Share2 size={18} /> },
   { name: "MongoDB", icon: <Database size={18} /> },
   { name: "PostgreSQL", icon: <Database size={18} /> },
   { name: "GraphQL", icon: <Braces size={18} /> },
-  { name: "REST API", icon: <Network size={18} /> },
+  { name: "REST API", icon: <Share2 size={18} /> },
   { name: "HTML5", icon: <FileCode size={18} /> },
   { name: "CSS3", icon: <FileCode size={18} /> },
   { name: "Tailwind CSS", icon: <Palette size={18} /> },
@@ -42,14 +49,25 @@ const tools = [
   { name: "Redux", icon: <Settings size={18} /> },
   { name: "Jest", icon: <Bug size={18} /> },
   { name: "Git", icon: <GitBranch size={18} /> },
-  { name: "GitHub", icon: <GitBranchPlus size={18} /> },
+  { name: "GitHub", icon: <Github size={18} /> },
   { name: "VS Code", icon: <Code size={18} /> },
   { name: "AWS", icon: <Cloud size={18} /> },
-  { name: "Docker", icon: <Container size={18} /> },
+  { name: "Docker", icon: <Box size={18} /> },
 ];
 
+interface Skill {
+  name: string;
+  proficiency: number; // percentage 0-100
+}
+
+interface SkillCategory {
+  id: string;
+  title: string;
+  skills: Skill[];
+}
+
 export function SkillsSection() {
-  const skillCategories = [
+  const skillCategories: SkillCategory[] = [
     {
       id: "frontend",
       title: "Frontend Development",
@@ -78,7 +96,6 @@ export function SkillsSection() {
         { name: "Serverless", proficiency: 70 },
       ],
     },
-
     {
       id: "other",
       title: "Other Skills",
@@ -97,6 +114,7 @@ export function SkillsSection() {
 
   return (
     <div className="container px-4 sm:px-6 lg:px-8">
+      {/* Accordion for Skill Categories */}
       <Accordion type="multiple" className="w-full space-y-4">
         {skillCategories.map((category) => (
           <AccordionItem key={category.id} value={category.id}>
@@ -104,8 +122,8 @@ export function SkillsSection() {
               {category.title}
             </AccordionTrigger>
             <AccordionContent className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
-              {category.skills.map((skill, index) => (
-                <Card key={index}>
+              {category.skills.map((skill, idx) => (
+                <Card key={idx}>
                   <CardHeader className="pb-2">
                     <div className="flex justify-between items-center">
                       <CardTitle className="text-lg">{skill.name}</CardTitle>
@@ -124,12 +142,13 @@ export function SkillsSection() {
         ))}
       </Accordion>
 
+      {/* Tools & Technologies Grid */}
       <div className="mt-16">
         <h2 className="text-2xl font-bold mb-6">Tools & Technologies</h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
-          {tools.map((tool, index) => (
+          {tools.map((tool, idx) => (
             <div
-              key={index}
+              key={idx}
               className="flex items-center gap-3 border rounded-md px-4 py-3 text-sm font-medium hover:bg-accent hover:text-accent-foreground transition-colors"
             >
               {tool.icon}
