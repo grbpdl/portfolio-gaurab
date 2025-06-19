@@ -28,7 +28,7 @@ import {
 
 interface Tool {
   name: string;
-  icon: JSX.Element;
+  icon: React.ReactElement;
 }
 
 const tools: Tool[] = [
