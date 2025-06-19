@@ -10,21 +10,22 @@ import {
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 import {
-  FileCode,
-  Braces,
-  Terminal,
-  Server,
-  Share2,
-  Database,
-  Palette,
-  Settings,
-  Bug,
-  GitBranch,
-  Github,
-  Code,
-  Cloud,
-  Box,
-} from "lucide-react";
+  FiFile,
+  FiCode,
+  FiTerminal,
+  FiServer,
+  FiShare2,
+  FiDatabase,
+  FiPackage,
+  FiSettings,
+  FiBug,
+  FiGitBranch,
+  FiGithub,
+  FiCloud,
+  FiBox,
+} from "react-icons/fi";
+
+import { FaReact, FaAws, FaDocker, FaGitAlt, FaJenkins } from "react-icons/fa";
 
 interface Tool {
   name: string;
@@ -32,27 +33,27 @@ interface Tool {
 }
 
 const tools: Tool[] = [
-  { name: "JavaScript", icon: <FileCode size={18} /> },
-  { name: "TypeScript", icon: <FileCode size={18} /> },
-  { name: "React", icon: <Braces size={18} /> },
-  { name: "Next.js", icon: <Terminal size={18} /> },
-  { name: "Node.js", icon: <Server size={18} /> },
-  { name: "Express", icon: <Share2 size={18} /> },
-  { name: "MongoDB", icon: <Database size={18} /> },
-  { name: "PostgreSQL", icon: <Database size={18} /> },
-  { name: "GraphQL", icon: <Braces size={18} /> },
-  { name: "REST API", icon: <Share2 size={18} /> },
-  { name: "HTML5", icon: <FileCode size={18} /> },
-  { name: "CSS3", icon: <FileCode size={18} /> },
-  { name: "Tailwind CSS", icon: <Palette size={18} /> },
-  { name: "SASS", icon: <Palette size={18} /> },
-  { name: "Redux", icon: <Settings size={18} /> },
-  { name: "Jest", icon: <Bug size={18} /> },
-  { name: "Git", icon: <GitBranch size={18} /> },
-  { name: "GitHub", icon: <Github size={18} /> },
-  { name: "VS Code", icon: <Code size={18} /> },
-  { name: "AWS", icon: <Cloud size={18} /> },
-  { name: "Docker", icon: <Box size={18} /> },
+  { name: "JavaScript", icon: <FiFile size={18} /> },
+  { name: "TypeScript", icon: <FiFile size={18} /> },
+  { name: "React", icon: <FaReact size={18} color="#61dafb" /> },
+  { name: "Next.js", icon: <FiTerminal size={18} /> },
+  { name: "Node.js", icon: <FiServer size={18} /> },
+  { name: "Express", icon: <FiShare2 size={18} /> },
+  { name: "MongoDB", icon: <FiDatabase size={18} /> },
+  { name: "PostgreSQL", icon: <FiDatabase size={18} /> },
+  { name: "GraphQL", icon: <FiCode size={18} /> },
+  { name: "REST API", icon: <FiShare2 size={18} /> },
+  { name: "HTML5", icon: <FiFile size={18} /> },
+  { name: "CSS3", icon: <FiFile size={18} /> },
+  { name: "Tailwind CSS", icon: <FiPackage size={18} /> },
+  { name: "SASS", icon: <FiPackage size={18} /> },
+  { name: "Redux", icon: <FiSettings size={18} /> },
+  { name: "Jest", icon: <FiBug size={18} /> },
+  { name: "Git", icon: <FiGitBranch size={18} /> },
+  { name: "GitHub", icon: <FiGithub size={18} /> },
+  { name: "VS Code", icon: <FiCode size={18} /> },
+  { name: "AWS", icon: <FaAws size={18} color="#ff9900" /> },
+  { name: "Docker", icon: <FaDocker size={18} color="#2496ed" /> },
 ];
 
 interface Skill {
