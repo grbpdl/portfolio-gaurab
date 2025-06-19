@@ -18,12 +18,12 @@ import {
   FiDatabase,
   FiPackage,
   FiSettings,
-  FiBug,
   FiGitBranch,
   FiGithub,
   FiCloud,
   FiBox,
 } from "react-icons/fi";
+import { AiOutlineBug } from "react-icons/ai";
 
 import { FaReact, FaAws, FaDocker, FaGitAlt, FaJenkins } from "react-icons/fa";
 
@@ -48,7 +48,7 @@ const tools: Tool[] = [
   { name: "Tailwind CSS", icon: <FiPackage size={18} /> },
   { name: "SASS", icon: <FiPackage size={18} /> },
   { name: "Redux", icon: <FiSettings size={18} /> },
-  { name: "Jest", icon: <FiBug size={18} /> },
+  { name: "Jest", icon: <AiOutlineBug size={18} /> },
   { name: "Git", icon: <FiGitBranch size={18} /> },
   { name: "GitHub", icon: <FiGithub size={18} /> },
   { name: "VS Code", icon: <FiCode size={18} /> },
