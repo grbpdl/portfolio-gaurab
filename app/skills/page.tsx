@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { SkillsSection } from "@/components/skills-section";
+// import { SkillsSection } from "@/components/skills-section";
 
 export const metadata: Metadata = {
   title: "Skills | Gaurab Paudyal",
@@ -21,7 +21,7 @@ export default function SkillsPage() {
         </div>
       </div>
 
-      <SkillsSection />
+      {/* <SkillsSection /> */}
     </div>
   );
 }
